@@ -1,0 +1,19 @@
+#EXTM3U
+#EXTINF: ./test.avi
+./test.avi
+#EXTINF: ./test.flv
+./test.flv
+#EXTINF: ./test.m4a
+./test.m4a
+#EXTINF: ./test.m4v
+./test.m4v
+#EXTINF: ./test.mov
+./test.mov
+#EXTINF: ./test.mp3
+./test.mp3
+#EXTINF: ./test.mp4
+./test.mp4
+#EXTINF: ./test.mpg
+./test.mpg
+#EXTINF: ./test.wmv
+./test.wmv
