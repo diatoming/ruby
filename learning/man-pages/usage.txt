@@ -1,0 +1,10 @@
+# install ruby gem ronn
+sudo gem ronn
+
+# write a .ronn file, using the ronn-format
+
+# run ronn; ie,
+$ ronn man/ronn.5.ronn
+
+# read the man page
+man ./ronn.1
