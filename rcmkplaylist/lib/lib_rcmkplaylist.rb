@@ -21,6 +21,9 @@
 # Error Subclasses
 NonArrayArgumentError = Class.new StandardError
 
+LABEL_FILE = '~/github/local/ruby/rcmkplaylist/lib/label_file.sh'
+LABEL_PATH = File.expand_path(LABEL_FILE)
+
 # remove any pre-existing playlist file
 def rm_old_playlist playlist_name='playlist.m3u'
   require 'FileUtils'
@@ -57,4 +60,8 @@ def write_playlist file_lst, playlist_name
       f.puts "#{file}"
     end
   end
+end
+
+def label_file file, label
+  `sh #{LABEL_PATH} #{label} #{file}`
 end

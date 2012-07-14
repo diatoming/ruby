@@ -30,13 +30,15 @@ if $0 == __FILE__
     
     require 'lib_rcmkplaylist'
     
-    PLAY_LIST_NAME = 'playlist.m3u'
+    PLAY_LIST_NAME  = 'playlist.m3u'
+    LABEL_COLOR     = 4
     media_files_ext = ['.flv','.mp4', '.mp3', '.avi', '.MP3', '.MOV',
                         '.m4a', '.wmv', '.mov', '.m4v','.mpg']
 
     rm_old_playlist
     file_lst = find_files_with_extensions media_files_ext
     write_playlist file_lst, PLAY_LIST_NAME
+    label_file PLAY_LIST_NAME, LABEL_COLOR
   rescue
     $stderr.puts "#{$!}"
     $@.each do |item| $stderr.puts item end
