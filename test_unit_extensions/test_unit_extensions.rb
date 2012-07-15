@@ -1,3 +1,18 @@
+#--
+# == Description
+# adds the awesome 'must' method to unit tests ;)
+#
+# == Author
+# Gregory Brown
+# 
+# == Source
+# https://github.com/sandal/rbp/blob/master/testing/\
+# test_unit_extensions.rb
+#
+# == Copyright
+# Copyright (c) Gregory Brown
+#++
+
 module Test::Unit
   # Used to fix a minor minitest/unit incompatibility in flexmock 
   AssertionFailedError = Class.new(StandardError)
