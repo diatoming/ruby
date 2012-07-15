@@ -1,6 +1,18 @@
-# source:
+#--
+# test_unit_extensions.rb
+#
+# == Description
+# This modules extends Test::Unit to include the 'must' method
+#
+# == Author
+# Gregory Brown
+#
+# == Source
 # Gregory Brown, Ruby Best Practices. O’Reilly Media, Inc. 2009
-# Copyright © 2009 Gregory Brown. All rights reserved.
+#
+# == Copyright
+# Copyright (c) 2009 Gregory Brown. All rights reserved.
+#++
 
 module Test::Unit
   # Used to fix a minor minitest/unit incompatibility in flexmock 

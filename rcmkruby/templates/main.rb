@@ -4,7 +4,8 @@
 # Require external libs
 
 # Require local libs
-require 'test/exceptions'
+require '#proj_name/exceptions'
+require '#proj_name/version'
 
 #--
 # #proj_name.rb

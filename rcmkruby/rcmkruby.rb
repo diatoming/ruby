@@ -1,16 +1,25 @@
 #!/usr/local/bin/macruby -w
 # Have faith in the way things are.
 
+DIR_TREE      = ['bin', 'examples', 'lib', 'man', 'test']
+README_FILE   = 'README.md'
+TEMPLATE_PATH = 'templates'
+TEMPLATE_FILE_PATHS = {
+  main: "main.rb", 
+  exceptions: "exceptions.rb", 
+  version: "version.rb",
+  test_unit_extensions: "test_unit_extensions.rb",
+  test_main: "test_main.rb"
+}
+
+
 class DirBuilder < Object
   
   require 'FileUtils'
   
-  DIR_TREE = %w(bin doc lib test)
-  
   def initialize proj_name
     @proj_name = proj_name
     @root_dir  = @proj_name
-    @main_dir  = @proj_name
   end
   
   def mkdir_tree
@@ -18,18 +27,34 @@ class DirBuilder < Object
     DIR_TREE.each do |dir| FileUtils.mkdir "#{@root_dir}/#{dir}" end
     FileUtils.mkdir "#{@root_dir}/lib/#{@proj_name}"
   end
-    
+      
 end
 
 
 class ReadMeWriter < Object
   
-  README = 'README.md'
-  DESCRIPTION = 'Describe the project here!'
-  
   def initialize proj_name
     @proj_name    = proj_name
-    @readme_path  = "#{@proj_name}/#{README}"
+    @readme_path  = "#{@proj_name}/#{README_FILE}"
+    
+    @description = <<-EOS
+# #{@proj_name}
+
+Describe the project here!
+
+## Usage
+
+### Instalation
+
+### Documentation
+
+### Examples
+
+## License
+Copyright (c) 2012 RimbaudCode
+Licensed under GPLv3+. No warranty provided.
+    EOS
+    
   end
   
   def write_header
@@ -42,7 +67,7 @@ class ReadMeWriter < Object
     
   def write_description
     File.open @readme_path, 'a' do |file| 
-      file.puts "#{DESCRIPTION}\n"
+      file.puts "#{@description}\n"
     end
   end
   
@@ -56,20 +81,10 @@ class ReadMeWriter < Object
 end
 
 
-class TemplatePlacer < Object
+class FileManager < Object
   
   require 'FileUtils'
-  
-  TEMPLATE_PATH = 'templates'
-  
-  ORG_LOCATIONS = {
-    main: "main.rb", 
-    exceptions: "exceptions.rb", 
-    version: "version.rb",
-    test_unit_extensions: "test_unit_extensions.rb",
-    test_main: "test_main.rb"
-  }
-  
+    
   def initialize proj_name
     @proj_name      = proj_name
     @proj_basedir   = File.absolute_path @proj_name
@@ -89,7 +104,7 @@ class TemplatePlacer < Object
   def cp_files
     [:main, :exceptions, :version, :test_unit_extensions,
       :test_main].each do |file|  
-        org_path = File.join @template_path, ORG_LOCATIONS[file]
+        org_path = File.join @template_path, TEMPLATE_FILE_PATHS[file]
         new_path = File.join @proj_basedir, @new_locations[file]
         FileUtils.cp org_path, new_path        
     end
@@ -119,8 +134,8 @@ if $0 == __FILE__
     readme_writer.write_header
     readme_writer.write_description
 
-    placer = TemplatePlacer.new proj_name
-    placer.cp_files
+    manager = FileManager.new proj_name
+    manager.cp_files
   rescue
     $stderr.puts "#{$!}"
     $@.each do |item| $stderr.puts item end

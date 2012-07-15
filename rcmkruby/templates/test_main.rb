@@ -2,8 +2,7 @@
 # lib_#proj_name.rb
 # init. rel.:  #date
 # current v.:  #version
-#++
-
+#
 # == Description
 # test suits
 #
@@ -13,7 +12,7 @@
 # == Copyright
 # Copyright (c) 2012 RimbaudCode
 # Licensed under GPLv3+. No warranty provided.
-
+#++
 
 require 'test/unit'
 require './test_unit_extensions'
