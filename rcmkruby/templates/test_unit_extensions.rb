@@ -1,17 +1,16 @@
 #--
-# test_unit_extensions.rb
-#
 # == Description
-# This modules extends Test::Unit to include the 'must' method
+# adds the awesome 'must' method to unit tests ;)
 #
 # == Author
 # Gregory Brown
-#
+# 
 # == Source
-# Gregory Brown, Ruby Best Practices. O’Reilly Media, Inc. 2009
+# https://github.com/sandal/rbp/blob/master/testing/\
+# test_unit_extensions.rb
 #
 # == Copyright
-# Copyright (c) 2009 Gregory Brown. All rights reserved.
+# Copyright (c) Gregory Brown
 #++
 
 module Test::Unit

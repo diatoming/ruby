@@ -52,8 +52,8 @@ Describe the project here!
 
 ## License
 Copyright (c) 2012 RimbaudCode
-Licensed under GPLv3+. No warranty provided.
-    EOS
+Licensed under GPLv3+. No warranty provided. 
+EOS
     
   end
   
@@ -67,7 +67,7 @@ Licensed under GPLv3+. No warranty provided.
     
   def write_description
     File.open @readme_path, 'a' do |file| 
-      file.puts "#{@description}\n"
+      file.puts "#{@description}"
     end
   end
   

@@ -1,51 +1,40 @@
-#!/usr/local/bin/macruby
-# Have faith in the way things are.
-
-# Require external libs
-
-# Require local libs
-require '#proj_name/exceptions'
-require '#proj_name/version'
-
+#!/usr/local/bin/ruby -w
 #--
-# #proj_name.rb
-# init. rel.:  #date
-# current v.:  #version
+# Have faith in the way things are.
+#
+# main.rb
+# v.: 0.0.1
 #++
 
 # == Description
-# This tool
+# description
 #
 # == Usage
-# ruby #proj_name.rb [opts]
+# ruby main.rb [opts]
 #
 # == Example
 # 
 # 
 # == Author
-# Arthur Rimbaud, RimbaudCode
+# rimbaud1854
 #
 # == Copyright
 # Copyright (c) 2012 RimbaudCode
 # Licensed under GPLv3+. No warranty provided.
 
-module #ProjName
-  
-  # code here!
-  
+# libs here
+
+def main args
+  # code here
+  0
 end
+
+# helper methods here
 
 
 if $0 == __FILE__
   begin
-    $LOAD_PATH << File.expand_path(File.dirname(__FILE__) << '../lib')
-    
-    # require external libs
-    # require local libs
-    require ''
-    
-    
-    
+    exit main $*
   rescue
     $stderr.puts "#{$!}"
     $@.each do |item| $stderr.puts item end

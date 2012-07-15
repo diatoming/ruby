@@ -1,10 +1,14 @@
 #--
+# Have faith in the way things are.
+#
 # version.rb
-# init. rel.:  #date
-# current v.:  #version
+# v.:  0.0.1
+#
+# == Description
+# tool version
 #
 # == Author
-# Arthur Rimbaud, RimbaudCode
+# rimbaud1854
 #
 # == Copyright
 # Copyright (c) 2012 RimbaudCode

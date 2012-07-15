@@ -1,13 +1,14 @@
 #--
+# Have faith in the way things are.
+#
 # exceptions.rb
-# init. rel.:  #date
-# current v.:  #version
+# v.:  0.0.1
 #
 # == Description
 # This modules contains the definitions of exception classes
 #
 # == Author
-# Arthur Rimbaud, RimbaudCode
+# rimbaud1854
 #
 # == Copyright
 # Copyright (c) 2012 RimbaudCode
