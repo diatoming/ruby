@@ -1,0 +1,31 @@
+dir tree:
+root
+  README.md
+  bin
+  doc
+  lib
+    main.rb
+    proj
+      exceptions.rb
+      version.rb
+  test
+    test_unit_extensions.rb
+    test_main.rb
+
+tags:
+  #proj_name    -> proj_name
+  #ProjName     -> ProjName (for modules)
+  #whichmacruby -> $ which macruby (`which macruby`.chomp)
+  #main.rb      -> proj_name.rb
+  #date         -> today's date (Time.now)
+  #version      -> proj_version (0.0.1)
+  
+tasks:
+  #get proj_name
+  #mk dir tree
+  #write readme.md
+  #cp template files to respective locations
+  replace tags
+  chmod 755 main.rb
+  
+  
