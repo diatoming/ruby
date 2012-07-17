@@ -24,7 +24,7 @@ require './lib/yaml_manager'
 filename  = 'test.txt'
 data      = {one: 'string', two: 'another string'}
 
-manager = YAMLManager.new
+manager = YAMLManager::Manager.new
 manager << filename
 manager.write_data data
 p manager.read_data

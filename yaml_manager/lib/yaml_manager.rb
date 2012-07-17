@@ -24,26 +24,30 @@
 # Copyright (c) 2012 RimbaudCode
 # Licensed under GPLv3+. No warranty provided.
 
-class YAMLManager < Object
+module YAMLManager
   
-  require 'yaml'
-  
-  def << filename
-    @filename = filename
-  end
-  
-  alias :add_file :<<
-  
-  def write_data data
-    File.open @filename, 'w' do |file| 
-      file.write data.to_yaml
+  class Manager < Object
+
+    require 'yaml'
+
+    def << filename
+      @filename = filename
     end
-  end
-  
-  def read_data
-    File.open @filename, 'r' do |file| 
-      YAML::load(File.read @filename)
+
+    alias :add_file :<<
+
+    def write_data data
+      File.open @filename, 'w' do |file| 
+        file.write data.to_yaml
+      end
     end
+
+    def read_data
+      File.open @filename, 'r' do |file| 
+        YAML::load(File.read @filename)
+      end
+    end
+
   end
   
 end
