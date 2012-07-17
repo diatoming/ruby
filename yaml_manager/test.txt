@@ -1,0 +1,3 @@
+---
+:one: string
+:two: another string
