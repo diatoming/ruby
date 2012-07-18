@@ -4,12 +4,17 @@
 # example.rb
 # using Charter.app and charter_client libraries to plot graphs
 #--
+# Created by Paolo Bosetti on 2011-09-02.
+# Copyright (c) 2011 University of Trento. All rights reserved.
+#
+# modified by art
 # Copyright 2012 RimbaudCode
 # Licensed under GPLv3+. No warranty is provided.
 #
 # usage:
 # copy charter_client.rb in ./lib
-# open Charter.app (download from App store), launch it and set state to running
+# open Charter.app (download from App store), launch it and set state 
+# to running
 # (turn the switch ON)
 # run this script (example.rb)
 #++
