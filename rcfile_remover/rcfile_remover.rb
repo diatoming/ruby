@@ -2,15 +2,15 @@
 #--
 # Have faith in the way things are.
 #
-# rm_ghost_files.rb
+# rcfile_remover.rb
 # v.: 0.0.1
 #++
 
 # == Description
-# find and remove hidden files with pattern ._*
+# remove files with a given pattern
 #
 # == Usage
-# ruby rm_ghost_files.rb
+# ruby file_remover.rb
 #
 # == Author
 # rimbaud1854
@@ -34,6 +34,7 @@ class FileRemover < Object
   end
   
   def rm_files
+    find_files
     @files_to_rm.each do |file| FileUtils.rm file end
   end
   
@@ -43,22 +44,27 @@ class FileRemover < Object
   
   def confirm_removal
     find_files
-    files_to_rm
+    @files_to_rm
   end
-      
+        
 end
 
 
 def main args
   pattern = '._*'
-  p FileUtils.pwd
+  dir     = FileUtils.pwd
+  #
+  puts "> removing files with pattern #{'._*'} in\n\t#{dir}"
+  #
   file_remover = FileRemover.new pattern
   file_remover.find_files
-  p 'files to remove...'
+  #
+  puts '> files to remove...'
   p file_remover.files_to_rm
   file_remover.rm_files
-  p 'confirmation of removal...'
-  file_remover.confirm_removal
+  #
+  puts '> confirmation of removal...'
+  p file_remover.confirm_removal
   0
 end
 
