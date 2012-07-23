@@ -10,7 +10,7 @@
 # remove files with a given pattern
 #
 # == Usage
-# ruby file_remover.rb
+# ruby rcfile_remover.rb
 #
 # == Author
 # rimbaud1854
