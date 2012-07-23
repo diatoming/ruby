@@ -21,5 +21,6 @@
 
 require 'FileUtils'
 
-patterns = ['*.aux', '*.log', '*.synctex.gz', '*.toc']
-patterns.each do |pattern| FileUtils.rm Dir.glob(pattern) end
+PATTERNS = %w(*.aux *.bbl *.blg *.dvi *.log *.synctex.gz *.toc)
+
+PATTERNS.each do |pattern| FileUtils.rm Dir.glob(pattern) end
