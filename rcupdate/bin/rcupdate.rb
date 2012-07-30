@@ -26,13 +26,13 @@ $LOAD_PATH << File.expand_path(File.dirname(__FILE__) + '/../lib')
 
 require 'lib_rcsys'
 
-apps = ['AppFresh.app', 'App Store.app', 'Dropbox.app', 
-  'Xmarks for Safari.app']
+apps = ['AppFresh.app', 'App Store.app', 'Dropbox.app', 'GitHub.app', 
+  'SkyDrive.app', 'Xmarks for Safari.app']
   
 special_apps = [
-  #'/System/Library/CoreServices/Software Update.app/Contents/MacOS/Software Update',
+  '/Applications/SugarSync Manager.app/Contents/MacOS/SugarSyncManager',
   '/Applications/TeX/TeX Live Utility.app/Contents/MacOS/TeX Live Utility',
-	'/Applications/SugarSync Manager.app/Contents/MacOS/SugarSyncManager',
+  '/System/Library/PreferencePanes/iCloudPref.prefPane',
   ]
   
 tools = ['brew update', 'brew upgrade']
@@ -41,8 +41,8 @@ apps.each do |app| RCSys.launch_app app end
 special_apps.each do |app| RCSys.launch_special_app app end
 tools.each do |tool| RCSys.launch_tool tool end
 p 'don\'t forget to update gems and gems packages'
-p 'also run skydrive...'
+#p 'also run skydrive...'
 p 'also macruby...'
-p 'also github reps...'
-p 'also icloud... ;)'
+#p 'also github reps...'
+#p 'also icloud... ;)'
 p 'done...'
