@@ -30,7 +30,7 @@ apps = ['AppFresh.app', 'App Store.app', 'Dropbox.app',
   'Xmarks for Safari.app']
   
 special_apps = [
-  '/System/Library/CoreServices/Software Update.app/Contents/MacOS/Software Update',
+  #'/System/Library/CoreServices/Software Update.app/Contents/MacOS/Software Update',
   '/Applications/TeX/TeX Live Utility.app/Contents/MacOS/TeX Live Utility',
 	'/Applications/SugarSync Manager.app/Contents/MacOS/SugarSyncManager',
   ]
