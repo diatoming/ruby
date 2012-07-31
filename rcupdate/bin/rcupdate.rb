@@ -26,8 +26,11 @@ $LOAD_PATH << File.expand_path(File.dirname(__FILE__) + '/../lib')
 
 require 'lib_rcsys'
 
-apps = ['AppFresh.app', 'App Store.app', 'Dropbox.app', 'GitHub.app', 
-  'SkyDrive.app', 'Xmarks for Safari.app']
+apps = [
+  #'AppFresh.app', 
+  'App Store.app', 'Dropbox.app', 'GitHub.app', 
+  'SkyDrive.app', 'Xmarks for Safari.app'
+  ]
   
 special_apps = [
   '/Applications/SugarSync Manager.app/Contents/MacOS/SugarSyncManager',
