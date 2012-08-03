@@ -52,18 +52,20 @@ end
 
 def main args
   pattern = '._*'
+  #pattern = '*Wiki*pdf'
   dir     = FileUtils.pwd
   #
-  puts "> removing files with pattern #{'._*'} in\n\t#{dir}"
+  puts "> removing files with pattern '#{pattern}' in\n\t#{dir}"
   #
   file_remover = FileRemover.new pattern
   file_remover.find_files
   #
   puts '> files to remove...'
-  p file_remover.files_to_rm
+  file_remover.files_to_rm.each do |file| puts file end
   file_remover.rm_files
   #
   puts '> confirmation of removal...'
+  #file_remover.confirm_removal.each do |file| puts file end
   p file_remover.confirm_removal
   0
 end
