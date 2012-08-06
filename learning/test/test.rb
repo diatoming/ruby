@@ -19,5 +19,5 @@
 # Copyright (c) 2012 RimbaudCode
 # Licensed under GPLv3+. No warranty provided.
 
-p 'this is a test!'
+p 'this is another test!'
 
