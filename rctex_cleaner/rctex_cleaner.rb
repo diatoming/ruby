@@ -23,4 +23,9 @@ require 'FileUtils'
 
 PATTERNS = %w(*.aux *.bbl *.blg *.dvi *.log *.synctex.gz *.toc *.out)
 
-PATTERNS.each do |pattern| FileUtils.rm Dir.glob(pattern) end
+# find files recursively and delete them
+PATTERNS.each do |pattern|
+  find_files = File.join("**", pattern) 
+  files_to_rm = Dir.glob(find_files)
+  files_to_rm.each do |file| FileUtils.rm file end
+end
