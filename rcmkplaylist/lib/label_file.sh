@@ -3,10 +3,11 @@
 #
 # label_file.sh
 # label a file or a directory using OSX Finder labeling system
-# Copyright 2012 RimbaudCode
-# License: GPLv3+
+# Copyright 2011 Robert Harder
 
-# source: ...
+# source:
+# http://superuser.com/questions/168927/mac-os-x-how-to-change-the-\
+# color-label-of-files-from-the-terminal
 
 if [ $# -lt 2 ]; then
 	echo "Usage: label [0-7] file1 file2 ..."
