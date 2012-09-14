@@ -45,5 +45,5 @@ special_apps.each do |app| RCSys.launch_special_app app end
 tools.each do |tool| RCSys.launch_tool tool end
 p 'don\'t forget to update gems and gems packages'
 p 'also macruby...'
-p 'also icloud... ;)'
+#p 'also icloud... ;)'
 p 'done...'
