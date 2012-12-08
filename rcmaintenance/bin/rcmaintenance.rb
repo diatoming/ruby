@@ -28,7 +28,8 @@ require 'lib_rcsys'
 
 apps = [
   #'Dr.Web Light.app', 
-  'ClamXav.app', 'CleanMyMac.app', 
+  'ClamXav.app', 
+  #'CleanMyMac.app', 
   'MacCleanse.app', 'CCleaner.app', 'iBoostUp.app', 
   'Ds Store Remover.app'
   ]
