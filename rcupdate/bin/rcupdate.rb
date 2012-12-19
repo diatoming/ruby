@@ -32,6 +32,7 @@ apps = [
   ]
   
 special_apps = [
+  '/Applications/CNET TechTracker'
   '/Applications/TeX/TeX Live Utility.app/Contents/MacOS/TeX Live Utility',
   ]
   
