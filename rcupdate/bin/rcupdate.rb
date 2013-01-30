@@ -28,7 +28,8 @@ require 'lib_rcsys'
 
 apps = [
   'App Store.app', 'Dropbox.app', 'GitHub.app', 'SkyDrive.app', 
-  'Xmarks for Safari.app', 'SugarSync.app'
+  'Xmarks for Safari.app', 
+  #'SugarSync.app'
   ]
   
 special_apps = [
