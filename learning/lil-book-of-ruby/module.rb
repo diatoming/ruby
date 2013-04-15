@@ -1,5 +1,12 @@
 #!/usr/local/bin/ruby -w
 
+# add modules from another dir, include the dir in the $: array!
+# then use require to load them
+# require returns true for successfull load and false otherwise
+$: << "./"
+# require 'module.rb'
+# p (require 'module.rb')
+
 # module are like namespaces/classes
 module Greeter  
   # constants
