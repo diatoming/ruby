@@ -27,7 +27,8 @@ $LOAD_PATH << File.expand_path(File.dirname(__FILE__) + '/../lib')
 require 'lib_rcsys'
 
 apps = [
-  'App Store.app', 
+  'App Store.app',
+  'AppFresh.app',
   'GitHub.app', 
   'Xmarks for Safari.app',
   'Dropbox.app', 
