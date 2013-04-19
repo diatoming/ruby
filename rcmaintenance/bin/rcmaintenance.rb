@@ -27,12 +27,15 @@ $LOAD_PATH << File.expand_path(File.dirname(__FILE__) << '/../lib')
 require 'lib_rcsys'
 
 apps = [
-  #'Dr.Web Light.app', 
   'ClamXav.app', 
-  #'CleanMyMac.app', 
-  'MacCleanse.app', 'CCleaner.app', 'iBoostUp.app', 
-  'Ds Store Remover.app'
+  'CleanMyMac 2.app', 
+  'MacCleanse.app', 
+  'CCleaner.app', 
+  'iBoostUp.app', 
+  'Ds Store Remover.app',
+  'DupCleanerLite.app'
   ]
 
 apps.each do |app| RCSys.launch_app app end
+
 p 'done...'
