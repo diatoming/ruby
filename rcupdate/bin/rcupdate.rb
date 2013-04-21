@@ -33,7 +33,6 @@ apps = [
   'Xmarks for Safari.app',
   'Dropbox.app', 
   'SkyDrive.app', 
-  'SugarSync.app',
   'doo.app',
   'JewelryBox.app',
   ]

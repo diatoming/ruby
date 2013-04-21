@@ -12,7 +12,7 @@ class TestFile < Test::Unit::TestCase
   end
 
   must '(path_components) return known output for known input' do 
-    exp_dirname = '/Users/art/SugarSync/code/ruby/rcfile_extensions/test'
+    exp_dirname = '/Users/art/SkyDrive/code/ruby/rcfile_extensions/test'
     exp_basename = 'test_file_extensions.rb'
     exp_output = [exp_dirname, exp_basename]
 
