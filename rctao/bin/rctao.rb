@@ -20,6 +20,9 @@
 # Copyright (c) 2012 rimbaudcode
 # Licensed under GPLv3+. No warranty provided.
 
+MIN_SECTION_NUMBER = 1
+MAX_SECTION_NUMBER = 81
+
 def main args
   usage if $*.length > 0
   reader  = LibRctao::TaoReader.new generate_section_number
@@ -33,7 +36,7 @@ end
 # input:  none
 # output: integer from 1 to 81
 def generate_section_number
-  rand 0..81
+  Random.new.rand(MIN_SECTION_NUMBER..MAX_SECTION_NUMBER)
 end
 
 def usage

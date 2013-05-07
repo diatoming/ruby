@@ -36,8 +36,7 @@ module LibRctao
     # output: section read in stdio
     def enlight_me
       puts "Tao Te Ching, Lao Tzu\n\n"
-      puts "*** Section #{File.basename @section_file_path, \
-      SECTION_FILE_EXT} ***\n\n"
+      puts "*** Section #{@section} ***\n\n"
       puts File.read @section_file_path
     end
   end
