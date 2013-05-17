@@ -1,4 +1,4 @@
-#!/usr/local/bin/macruby -w
+#!/usr/local/bin/macruby
 #--
 # Have faith in the way things are.
 #

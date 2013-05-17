@@ -1,4 +1,4 @@
-#!/usr/local/bin/ruby -w
+#!/usr/local/bin/ruby
 # Have faith in the way things are.
 
 # rcfibonacci.rb

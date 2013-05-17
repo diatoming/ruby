@@ -1,4 +1,4 @@
-#!/usr/local/bin/ruby -w
+#!/usr/local/bin/ruby
 # Have faith in the way things are.
 
 # ddg.rb
@@ -16,7 +16,7 @@ def usage
   exit 0
 end
 
-usage unless $*.nil?
+usage if $*.nil?
 
 zci = DuckDuckGo.new.zeroclickinfo($*.join(' '))
 
