@@ -42,20 +42,19 @@ OUTPUT_PDF  = File.basename(GNUPLOT_RUBY, 'rb') << 'pdf'
 
 # tasks
 DEFAULT_TASKS = [
-  :check_environment,
+  :sanity_checks,
   :build_gnuplot_tex, 
   :build_wrapper_tex,
   :build_wrapper_pdf,
   :wrapper_to_final_pdf,
   :clean,
-  #:open_pdf
   ]
 
 desc 'get a pdf file from ruby-gnuplot data'
 task :default => DEFAULT_TASKS
 
 desc 'check if the environment is correctly set'
-task :check_environment do
+task :sanity_checks do
   FileDoesNotExistError   = Class.new StandardError
   NoGNUPlotInstalledError = Class.new StandardError
   NoTeXDistributionError  = Class.new StandardError
@@ -102,6 +101,7 @@ CLOBBER.include('*.pdf')
 
 
 # instructions to build the necessary files
+
 # produce raw graphic using gnuplot
 file GNUPLOT_TEX => GNUPLOT_RUBY do
   `ruby #{GNUPLOT_RUBY}`
@@ -125,6 +125,7 @@ file WRAPPER_TEX => GNUPLOT_TEX do
   end
 end
 
+# build the pdf file from the wrapper
 file WRAPPER_PDF => WRAPPER_TEX do 
   `#{PDFLATEX_PATH} #{WRAPPER_TEX}` 
 end
