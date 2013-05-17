@@ -1,11 +1,11 @@
-#!/usr/local/bin/ruby -w
+#!/usr/local/bin/ruby
 
 ENV['RB_GNUPLOT'] = '/usr/local/bin/gnuplot'
 
 require 'gnuplot'
 require 'tmpdir'
 
-pdfFile = 'dataset.pdf'
+pdfFile = 'sine.pdf'
 
 # work in tmp folder
 currentDir = Dir.getwd
@@ -16,19 +16,26 @@ texPlotFile = File.basename pdfFile, '.pdf'
 # plot the graph
 Gnuplot.open do |gp|
   Gnuplot::Plot.new( gp ) do |plot|
-  
-    plot.title  "Array Plot Example"
-    plot.ylabel "x"
-    plot.xlabel "x^2"
-    
-    x = (0..50).collect { |v| v.to_f }
-    y = x.collect { |v| v ** 2 }
 
-    plot.data << Gnuplot::DataSet.new( [x, y] ) do |ds|
-      ds.with = "linespoints"
-      ds.notitle
+    # A4: 29.71 × 21.01 cm
+    plot.terminal 'latex size 21.71cm, 13.01cm'
+    plot.output "#{texPlotFile}.tex"
+    # to use latex math!
+    plot.format 'xy "$%g$"'
+    plot.key 'bottom right'
+    plot.grid
+    
+    plot.title  "Sine function"
+    plot.xlabel 'sin$(x)$ [1]'
+    plot.ylabel '$x$ [rad]'
+    plot.xrange '[0:3*pi]'
+    plot.yrange '[-1:1]'
+    
+    plot.data << Gnuplot::DataSet.new( 'sin(x)' ) do |ds|
+      ds.with = 'lines linetype 3 linecolor rgbcolor "black"'
+      ds.linewidth = 1
     end
-  end
+  end  
 end
 
 # latex file holding the gnuplot
@@ -58,7 +65,7 @@ File.open texSrcFile, 'w' do |tmp|
 end
 
 puts 'compiling latex source...'
-`pdflatex -interaction=batchmode #{texSrcFile}`
+`/usr/texbin/pdflatex -interaction=batchmode #{texSrcFile}`
 
 # mv latex compiled pdf
 outTexPdfFile = File.basename texSrcFile, '.tex'
@@ -68,5 +75,5 @@ finalFile = File.join currentDir, pdfFile
 File.rename outTexPdfFile, finalFile
 
 # clean up
-texTmpFiles = %w(*.tex *.aux *.log )
-`rm *.tex *.aux *.log`
+#texTmpFiles = %w(*.tex *.aux *.log )
+#{}`rm *.tex *.aux *.log`
