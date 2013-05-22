@@ -59,7 +59,6 @@ def main args
   0
 end
 
-
 if $0 == __FILE__
   begin
     exit main $*
