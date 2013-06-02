@@ -2,23 +2,20 @@
 #--
 # Have faith in the way things are.
 #
-# test.rb
+# remote_filesize.rb
 # current v.: 0.0.1
-# date: 2013.05.22
+# date: 2013.06.02
 #++
 
 # == Description
-# description
+# get size of remote files
 #
 # == Usage
-# macruby test.rb [opts]
+# remote_filesize.rb
 #
 # == Compilation
-# macrubyc test.rb -o test
+# macrubyc remote_filesize.rb -o remote_filesize
 #
-# == Example
-# 
-# 
 # == Author
 # rimbaud1854
 #
