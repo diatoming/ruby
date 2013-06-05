@@ -33,7 +33,7 @@ if $0 == __FILE__
     PLAY_LIST_NAME  = 'playlist.m3u'
     LABEL_COLOR     = 4
     media_files_ext = ['.flv','.mp4', '.MP4', '.mp3', '.avi', '.MP3', '.MOV',
-                        '.m4a', '.wmv', '.mov', '.m4v','.mpg']
+                        '.m4a', '.wmv', '.mov', '.m4v','.mpg', '.f4v']
 
     rm_old_playlist
     file_lst = find_files_with_extensions media_files_ext
