@@ -21,7 +21,10 @@
 # https://github.com/shaper/yahoo-weather
 #
 # == Example
-# 
+# yahooweather 549064 # WOEID for Leoben, AT
+#
+# == Installation
+# gem install weather-api
 # 
 # == Author
 # Andrew Stewart
