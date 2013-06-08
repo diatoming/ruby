@@ -21,7 +21,7 @@
 
 $LOAD_PATH << './lib'
 
-require 'charter_client'
+  require 'charter_client'
 
 # Instantiate a new Charter::Client object:
 ch = Charter::Client.new(1)  # 1 is the default ID
