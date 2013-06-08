@@ -9,15 +9,17 @@
 
 # == Description
 # A Ruby wrapper for the Yahoo! Weather XML RSS feed
+# the lib uses Yahoo!s Where on Earth IDentifier, WOEID, a unique 32 bit 
+# reference identifier assigned by Yahoo! to identify any feature on Earth.
 #
 # == Usage
-# yahooweather.rb [opts]
+# yahooweather.rb [WOEID]
 #
 # == Source
 # https://github.com/stewart/weather-api
 #
 # == Personal note:
-# at least the API and the example code look very similar to
+# at least the API and the example code look very similar to the older
 # https://github.com/shaper/yahoo-weather
 #
 # == Example
@@ -43,6 +45,7 @@ def main args
 
   # look up WOEID via http://weather.yahoo.com; enter location by city
   # name or zip and WOEID is at end of resulting page url.
+  # 'c' stands for Celsius
   response = Weather.lookup woeid, 'c'
   
   info = <<-EOS
@@ -63,7 +66,7 @@ end
 
 def usage
   puts 'A Ruby wrapper for the Yahoo! Weather XML RSS feed'
-  puts "usage: yahooweather.rb [WOEID]"
+  puts 'usage: yahooweather.rb [WOEID]'
   exit
 end
 
