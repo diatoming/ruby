@@ -42,7 +42,7 @@ special_apps = [
   '/Applications/TeX/TeX Live Utility.app/Contents/MacOS/TeX Live Utility',
   ]
   
-tools = ['brew update', 'brew upgrade']
+tools = ['brew update', 'brew upgrade', 'cabal update']
 
 apps.each do |app| RCSys.launch_app app end
 special_apps.each do |app| RCSys.launch_special_app app end
