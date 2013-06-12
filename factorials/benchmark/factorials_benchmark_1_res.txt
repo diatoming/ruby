@@ -1,0 +1,29 @@
+Benchmarking results for the lib 'factorials.rb'
+
+Test values to compare every method result
+
+Factorials calculated for n = 20
+
+Values:
+Fact. class method 'fact_1':  2432902008176640000
+Fact. class method 'fact_2':  2432902008176640000
+Fact. class method 'look_up': 2432902008176640000
+Fixnum method '_!':           2432902008176640000
+CCode method: 'fact':         2432902008176640000
+
+Benchmarks for n = 20 and 500000 tests
+
+Rehearsal ----------------------------------------------------------------------
+Factorials class method 'fact_1':    1.090000   0.000000   1.090000 (  1.097975)
+Factorials class method 'fact_2':    0.780000   0.000000   0.780000 (  0.780786)
+Factorials class method 'look_up':   0.190000   0.000000   0.190000 (  0.190750)
+Fixnum method '_!':                  0.100000   0.000000   0.100000 (  0.103771)
+CCode method: 'fact':                0.060000   0.000000   0.060000 (  0.052712)
+------------------------------------------------------------- total: 2.220000sec
+
+                                         user     system      total        real
+Factorials class method 'fact_1':    1.100000   0.010000   1.110000 (  1.102691)
+Factorials class method 'fact_2':    0.760000   0.000000   0.760000 (  0.757375)
+Factorials class method 'look_up':   0.190000   0.000000   0.190000 (  0.187770)
+Fixnum method '_!':                  0.100000   0.000000   0.100000 (  0.100851)
+CCode method: 'fact':                0.060000   0.000000   0.060000 (  0.054205)
