@@ -1,0 +1,25 @@
+#!/usr/local/bin/ruby
+# Have faith in the way things are.
+
+$LOAD_PATH << File.expand_path(File.join(__dir__, '../lib'))
+
+require 'optparse'
+require 'methadone'
+require 'factorial.rb'
+
+class App
+  include Methadone::Main
+  include Methadone::CLILogging
+
+  main do |integer_value|
+    puts ARGV.shift.to_i._!
+  end
+  
+  description 'calculation of factorial numbers'
+    
+  arg :integer_value, :required, :one
+  
+  version Factorial::VERSION
+
+  go!
+end
