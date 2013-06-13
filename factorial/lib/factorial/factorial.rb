@@ -78,14 +78,9 @@ end
 
 if $0 == __FILE__
   begin
-    n = 20
-
-    c_code = Factorial::CCode.new
-
-    p "Fact. class method 'fact_1':  #{Factorial::Factorial::fact_1 n}"
-    p "Fact. class method 'fact_2':  #{Factorial::Factorial::fact_2 n}"
-    p "Fixnum method '_!':           #{n._!}"
-    p "CCode method: 'fact':         #{c_code.fact n}"
+    
+    input = ARGV.shift
+    p input.to_i._!
 
     exit
   rescue
