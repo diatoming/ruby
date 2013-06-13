@@ -1,24 +1,5 @@
 #!/usr/local/bin/ruby
-#--
 # Have faith in the way things are.
-#
-# factorial.rb
-# current v.: 0.0.1
-# date: 2013.06.13
-#++
-
-# == Description
-# factorials
-#
-# == Usage
-# factorial.rb
-#
-# == Author
-# rimbaud1854
-#
-# == Copyright
-# Copyright (c) 2013 rimbaudcode
-# Licensed under GPLv3+. No warranty provided.
 
 # global hash: to hold known factorials
 $kfact = {0 => 1, 1 => 1}
