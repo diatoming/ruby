@@ -59,10 +59,10 @@ end
 def main args
   c_func = CCode.new
 
-  range = (0..10_000)
+  range = (0..1_000)
   array = []
   range.each do |num| array << c_func.rand_unit end
-  #puts array
+  puts array
   
   exit
 end

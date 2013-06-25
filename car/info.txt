@@ -1,2 +1,0 @@
-some OOP, Ruby and programming best practices concepts applied
-to the basic model of a car
