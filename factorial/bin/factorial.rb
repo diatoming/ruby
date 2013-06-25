@@ -23,26 +23,26 @@
 $LOAD_PATH << File.expand_path(File.join(__dir__, '../lib'))
 
 require 'factorial'
-require 'is-num'
 
-def usage
-  puts 'Return the n factorial of an integer'
-  puts "usage: #{File.basename $0, '.rb'} n" 
+def main args
+  input = $*.shift
+  usage if input.nil?
+  raise NonNumericValueError unless input.is_int?
+  p input.to_i._!
   exit
 end
 
+def usage
+  puts 'Return the factorial of an integer'
+  puts "usage: #{File.basename $0, '.rb'} [integer]"
+  exit
+end
+
+NonNumericValueError = Class.new StandardError
+
 if $0 == __FILE__
   begin
-    input = $*.shift
-    
-    usage if input.nil?
-        
-    NonNumericValueError = Class.new StandardError
-    raise NonNumericValueError unless input.is_int?
-    
-    p input.to_i._!
-
-    exit
+    exit main $*
   rescue
     $stderr.puts "#{$!}"
     $@.each do |item| $stderr.puts item end
@@ -51,3 +51,4 @@ if $0 == __FILE__
     #
   end
 end
+
