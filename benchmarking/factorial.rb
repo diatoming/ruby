@@ -53,3 +53,30 @@ def factorial_memoization(n)
   $kfact[n] = res
   return res
 end
+
+class CCode < Object
+  
+  require 'inline'
+  
+  inline do |builder|
+    
+    builder.include '<assert.h>'
+    builder.include '<iso646.h>'
+    
+    builder.add_compile_flags '-O3'
+    
+    builder.c <<-EOS
+    long factorial(int n)
+    {
+      assert(sizeof(int) == sizeof(n));
+      assert(n >= 0 and n <= 20);
+      long result = 1;
+
+      for (int c = 1; c <= n; c++)
+        result = result * c;
+
+      return result;
+    }
+    EOS
+  end
+end
