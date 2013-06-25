@@ -20,6 +20,10 @@
 # Copyright (c) 2013 rimbaudcode
 # Licensed under GPLv3+. No warranty provided.
 
+$LOAD_PATH << File.expand_path(File.dirname(__FILE__) << '/../lib')
+
+require 'is-num'
+require 'binomial'
 
 def usage
   puts 'Return n choose k (binomial coefficient)'
@@ -27,14 +31,8 @@ def usage
   exit 0
 end
 
-
 if $0 == __FILE__
   begin
-    $LOAD_PATH << File.expand_path(File.dirname(__FILE__) << '/../lib')
-
-    require 'is-num'
-    require 'binomial'
-
     n, k = $*.shift, $*.shift
     
     usage if k.nil?

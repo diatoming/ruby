@@ -1,23 +1,23 @@
+#!/usr/local/bin/ruby
 #--
-# lib_rctau.rb
-# init. rel.:  2012.06.01
-# current v.:  0.0.1
+# Have faith in the way things are.
+#
+# tau.rb
+# current v.: 0.0.1
+# date: 2013.06.25
 #++
 
-# This module encapsulates the functionality related to
-# Maths functions
-#
 # == Description
-# return the tau number, 2 * pi, using hi-precision arithmetics
+# Tau number :)
 #
-# == Example
-# 
+# == Usage
+# tau.rb
 # 
 # == Author
-# Arthur Rimbaud, RimbaudCode
+# rimbaud1854
 #
 # == Copyright
-# Copyright (c) 2012 RimbaudCode
+# Copyright (c) 2013 rimbaudcode
 # Licensed under GPLv3+. No warranty provided.
 
 module Math

@@ -1,19 +1,24 @@
+#!/usr/local/bin/ruby
 #--
-# lib_rcbinomial.rb
-# init. rel.:  2012.06.01
-# current v.:  0.0.1
+# Have faith in the way things are.
+#
+# binomial.rb
+# current v.: 0.0.1
+# date: 2013.06.25
 #++
 
-=begin rdoc
-return the binomial coefficient given n and k (n choose k)
-
-== Examples:
- 100.choose 10          # --> ...
- 
---
-Copyright (c) 2012 RimbaudCode
-Licensed under GPLv3+. No warranty provided.
-=end
+# == Description
+# binomial coefficient
+#
+# == Usage
+# binomial.rb
+#
+# == Author
+# rimbaud1854
+#
+# == Copyright
+# Copyright (c) 2013 rimbaudcode
+# Licensed under GPLv3+. No warranty provided.
 
 $LOAD_PATH << File.expand_path(File.dirname(__FILE__))
 

@@ -20,7 +20,7 @@
 # Copyright (c) 2013 rimbaudcode
 # Licensed under GPLv3+. No warranty provided.
 
-module RCSys
+module System
 
   def self.launch_app app
     p "running #{app}..."

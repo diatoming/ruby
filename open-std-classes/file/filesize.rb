@@ -31,14 +31,10 @@ class File < Object
 end
 
 
-def main args
-  p File.size_in_mb __FILE__
-  0
-end
-
 if $0 == __FILE__
   begin
-    exit main $*
+    p File.size_in_mb __FILE__
+    0
   rescue
     $stderr.puts "#{$!}"
     $@.each do |item| $stderr.puts item end

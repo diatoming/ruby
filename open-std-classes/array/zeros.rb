@@ -33,17 +33,13 @@ class Array < Object
 end
 
 
-def main args
-  a = []
-  a.fill_with_n_zeros 10
-  p a
-  p a.length
-  0
-end
-
 if $0 == __FILE__
   begin
-    exit main $*
+    a = []
+    a.fill_with_n_zeros 10
+    p a
+    p a.length
+    0
   rescue
     $stderr.puts "#{$!}"
     $@.each do |item| $stderr.puts item end

@@ -1,22 +1,26 @@
+#!/usr/local/bin/ruby
 #--
 # Have faith in the way things are.
 #
-# lib_rctao.rb
-# current v.:  0.0.1
-# date: 2013.04.14
+# tao.rb
+# current v.: 0.0.1
+# date: 2013.06.25
 #++
 
 # == Description
-# this modules encapsulates the functionality related to the reading
-# of the Tao Te Ching in stdio
-# 
+# read a chapter of the Tao Te Ching in stdio
+#
+# == Usage
+# tao.rb
+#
 # == Author
 # rimbaud1854
 #
 # == Copyright
 # Copyright (c) 2013 rimbaudcode
 # Licensed under GPLv3+. No warranty provided.
-module LibRctao
+
+module Tao
   
   class TaoReader < Object
     # tao-te-ching folder path relative to this script path!

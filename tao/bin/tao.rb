@@ -25,7 +25,7 @@ MAX_SECTION_NUMBER = 81
 
 def main args
   usage if $*.length > 0
-  reader  = LibRctao::TaoReader.new generate_section_number
+  reader  = Tao::TaoReader.new generate_section_number
   reader.enlight_me
   0
 end

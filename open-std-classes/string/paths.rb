@@ -49,28 +49,24 @@ class String < Object
 end
 
 
-def main args
-  file_path = '~/Desktop'
-  p file_path.basename
-  p file_path.expand_path
-  p file_path.expand_tilde
-  
-  file_path = __FILE__
-  p file_path.basename
-  p file_path.extname
-  p file_path.extension
-  p file_path.rm_extname
-  p file_path.rm_extension
-  
-  file_path = '/dev/null'
-  str = 'this is a test'
-  
-  exit
-end
-
 if $0 == __FILE__
   begin
-    exit main $*
+    file_path = '~/Desktop'
+    p file_path.basename
+    p file_path.expand_path
+    p file_path.expand_tilde
+
+    file_path = __FILE__
+    p file_path.basename
+    p file_path.extname
+    p file_path.extension
+    p file_path.rm_extname
+    p file_path.rm_extension
+
+    file_path = '/dev/null'
+    str = 'this is a test'
+
+    exit
   rescue
     $stderr.puts "#{$!}"
     $@.each do |item| $stderr.puts item end

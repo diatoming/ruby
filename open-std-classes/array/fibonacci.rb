@@ -32,16 +32,12 @@ class Array < Object
 end
 
 
-def main args
-  a = []
-  a.fib_up_to 10
-  p a
-  0
-end
-
 if $0 == __FILE__
   begin
-    exit main $*
+    a = []
+    a.fib_up_to 10
+    p a
+    0
   rescue
     $stderr.puts "#{$!}"
     $@.each do |item| $stderr.puts item end

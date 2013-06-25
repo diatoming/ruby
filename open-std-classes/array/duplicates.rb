@@ -44,24 +44,21 @@ class Array
 end
 
 
-def main args
-  a = [0, 0, 1]
-  p a.duplicates?
-  p a.duplicates
-
-  a = [0, 0, 1, 1, 'a', 'a', 'b']
-  p a.duplicates?
-  p a.duplicates
-
-  a = [0, 1, 2, 'b']
-  p a.duplicates?
-  p a.duplicates
-  0
-end
-
 if $0 == __FILE__
   begin
-    exit main $*
+    a = [0, 0, 1]
+    p a.duplicates?
+    p a.duplicates
+
+    a = [0, 0, 1, 1, 'a', 'a', 'b']
+    p a.duplicates?
+    p a.duplicates
+
+    a = [0, 1, 2, 'b']
+    p a.duplicates?
+    p a.duplicates
+    
+    0
   rescue
     $stderr.puts "#{$!}"
     $@.each do |item| $stderr.puts item end

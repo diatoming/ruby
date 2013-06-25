@@ -1,20 +1,23 @@
+#!/usr/local/bin/ruby
 #--
-# lib_rctitlecase.rb
-# init. rel.:  2012.06.01
-# current v.:  0.0.1
+# Have faith in the way things are.
+#
+# titlecase.rb
+# current v.: 0.0.1
+# date: 2013.06.25
 #++
 
-# This module encapsulates the functionality related to
-# extends String case to map strings in title case
-#
 # == Description
 # uppercase first letters of words
 #
+# == Usage
+# titlecase.rb
+#
 # == Author
-# Arthur Rimbaud, RimbaudCode
+# rimbaud1854
 #
 # == Copyright
-# Copyright (c) 2012 RimbaudCode
+# Copyright (c) 2013 rimbaudcode
 # Licensed under GPLv3+. No warranty provided.
 
 class String
@@ -28,14 +31,10 @@ class String
 end
 
 
-def main args
-  puts "this is a string".titlecase
-  exit
-end
-
 if $0 == __FILE__
   begin
-    exit main $*
+    puts "this is a string".titlecase
+    exit
   rescue
     $stderr.puts "#{$!}"
     $@.each do |item| $stderr.puts item end

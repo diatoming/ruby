@@ -1,23 +1,23 @@
+#!/usr/local/bin/ruby
 #--
-# lib_rcisnum.rb
-# init. rel.:  2012.06.01
-# current v.:  0.0.1
+# Have faith in the way things are.
+#
+# is-num.rb
+# current v.: 0.0.1
+# date: 2013.06.25
 #++
 
-# Extensions to String to test if a string contains numeric values
-#
 # == Description
-# Extensions to String to test if a string contains numeric values
+# test if a string contains numeric values
 #
-# == Example
-# '10'.is_int?                    # --> true
-# "aoeu".is_float?                # --> false
+# == Usage
+# is-num.rb
 #
 # == Author
-# Arthur Rimbaud, RimbaudCode
+# rimbaud1854
 #
 # == Copyright
-# Copyright (c) 2012 RimbaudCode
+# Copyright (c) 2013 rimbaudcode
 # Licensed under GPLv3+. No warranty provided.
 
 class String

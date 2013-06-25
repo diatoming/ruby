@@ -1,13 +1,45 @@
 #!/usr/local/bin/ruby
+#--
 # Have faith in the way things are.
+#
+# factorial.rb
+# current v.: 0.0.1
+# date: 2013.06.25
+#++
+
+# == Description
+# factorial numbers
+#
+# == Usage
+# factorial.rb
+#
+# == Author
+# rimbaud1854
+#
+# == Copyright
+# Copyright (c) 2013 rimbaudcode
+# Licensed under GPLv3+. No warranty provided.
 
 $LOAD_PATH << File.expand_path(File.join(__dir__, '../lib'))
 
 require 'factorial'
+require 'is-num'
+
+def usage
+  puts 'Return the n factorial of an integer'
+  puts "usage: #{File.basename $0, '.rb'} n" 
+  exit 0
+end
 
 if $0 == __FILE__
   begin
-    input = ARGV.shift
+    input = $*.shift
+    
+    usage if input.nil?
+        
+    NonNumericValueError = Class.new StandardError
+    raise NonNumericValueError unless input.is_int?
+    
     p input.to_i._!
 
     exit

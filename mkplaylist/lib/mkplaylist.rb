@@ -22,7 +22,7 @@
 
 NonArrayArgumentError = Class.new StandardError
 
-LABEL_FILE = '~/github/local/ruby/mkplaylist/lib/label_file.sh'
+LABEL_FILE = '~/SkyDrive/Apps/filecolorer'
 LABEL_PATH = File.expand_path(LABEL_FILE)
 
 # remove any pre-existing playlist file
@@ -64,5 +64,5 @@ def write_playlist file_lst, playlist_name
 end
 
 def label_file file, label
-  `sh #{LABEL_PATH} #{label} #{file}`
+  `#{LABEL_PATH} #{file} #{label}`
 end

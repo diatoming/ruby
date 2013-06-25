@@ -42,9 +42,9 @@ special_apps = [
   
 tools = ['brew update', 'brew upgrade', 'cabal update']
 
-apps.each do |app| RCSys.launch_app app end
-special_apps.each do |app| RCSys.launch_special_app app end
-tools.each do |tool| RCSys.launch_tool tool end
+apps.each do |app| System.launch_app app end
+special_apps.each do |app| System.launch_special_app app end
+tools.each do |tool| System.launch_tool tool end
 
 p 'don\'t forget to update gems and gems packages'
 p 'also macruby...'
