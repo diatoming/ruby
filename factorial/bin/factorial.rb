@@ -28,7 +28,7 @@ require 'is-num'
 def usage
   puts 'Return the n factorial of an integer'
   puts "usage: #{File.basename $0, '.rb'} n" 
-  exit 0
+  exit
 end
 
 if $0 == __FILE__
