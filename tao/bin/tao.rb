@@ -20,6 +20,10 @@
 # Copyright (c) 2012 rimbaudcode
 # Licensed under GPLv3+. No warranty provided.
 
+$LOAD_PATH << File.expand_path(File.dirname(__FILE__) << './../lib')
+
+require 'tao'
+
 MIN_SECTION_NUMBER = 1
 MAX_SECTION_NUMBER = 81
 
@@ -29,7 +33,6 @@ def main args
   reader.enlight_me
   0
 end
-
 
 # generate the number of the section to read, based on a 
 # generated pseudo-random number between 1 and 81 (included)
@@ -42,15 +45,11 @@ end
 def usage
   puts 'display a random section of the Tao Te Ching'
   puts "usage: #{File.basename $0, '.rb'}"
-  exit 0
+  exit
 end
 
 if $0 == __FILE__
-  begin
-    $LOAD_PATH << File.expand_path(File.dirname(__FILE__) << './../lib')
-
-    require 'tao'
-    
+  begin    
     exit main $*
   rescue
     $stderr.puts "#{$!}"
