@@ -46,20 +46,3 @@ module Tao
   end
   
 end
-
-
-# little test
-if $0 == __FILE__
-  begin
-    reader = LibRctao::TaoReader.new 10
-    reader.enlight_me
-    0
-  rescue
-    $stderr.puts "#{$!}"
-    $@.each do |item| $stderr.puts item end
-    exit 1
-  ensure
-    #
-  end
-end
-
