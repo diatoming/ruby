@@ -20,6 +20,11 @@
 # Copyright (c) 2013 rimbaudcode
 # Licensed under GPLv3+. No warranty provided.
 
+$LOAD_PATH << File.expand_path(File.join(__dir__, '../lib'))
+
+require 'is-num'
+require 'tau'
+
 def usage
   puts 'Return the Tau number'
   puts "usage: #{File.basename $0, '.rb'}" 
@@ -28,15 +33,8 @@ end
 
 if $0 == __FILE__
   begin
-    $LOAD_PATH << File.expand_path(File.join(__dir__, '../lib'))
-    
-    require 'is-num'
-    require 'tau'
-    
     usage if $*.nil?
-    
     p Math::tau.to_s('F')
-    
   rescue
     $stderr.puts "#{$!}"
     $@.each do |item| $stderr.puts item end
