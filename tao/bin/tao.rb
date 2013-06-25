@@ -41,10 +41,9 @@ end
 
 def usage
   puts 'display a random section of the Tao Te Ching'
-  puts "usage: rctao.rb"
+  puts "usage: #{File.basename $0, '.rb'}"
   exit 0
 end
-
 
 if $0 == __FILE__
   begin
