@@ -3,15 +3,11 @@
 # Have faith in the way things are.
 #
 # update.rb
-# current v.: 0.0.1
 # date: 2013.06.25
 #++
 
 # == Description
 # update system
-#
-# == Usage
-# update.rb
 #
 # == Author
 # rimbaud1854

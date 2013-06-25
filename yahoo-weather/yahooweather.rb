@@ -34,13 +34,11 @@
 # == Copyright
 # Copyright (c) 2012 Andrew Stewart
 
-
 def main args
   
   require 'weather-api'
   
   woeid = $*.shift
-  
   puts usage if woeid.nil?
 
   # look up WOEID via http://weather.yahoo.com; enter location by city
@@ -61,15 +59,13 @@ def main args
   print info
   
   exit
-  
 end
 
 def usage
   puts 'A Ruby wrapper for the Yahoo! Weather XML RSS feed'
-  puts 'usage: yahooweather.rb [WOEID]'
+  puts "usage: #{File.basename $0, '.rb'} [WOEID]"
   exit
 end
-
 
 if $0 == __FILE__
   begin
