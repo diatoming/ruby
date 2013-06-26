@@ -20,7 +20,7 @@
 # Copyright (c) 2013 rimbaudcode
 # Licensed under GPLv3+. No warranty provided.
 
-$LOAD_PATH << File.expand_path(File.dirname(__FILE__))
+$LOAD_PATH << File.expand_path(File.join(__dir__, './'))
 
 require 'factorial'
 
