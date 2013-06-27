@@ -26,7 +26,7 @@
 # Copyright (c) 2013 rimbaudcode
 # Licensed under GPLv3+. No warranty provided.
 
-class Array
+class Array < Object
   
   # are there duplicates?
   # returns true if there are duplicates
