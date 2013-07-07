@@ -22,7 +22,7 @@
 
 NonArrayArgumentError = Class.new StandardError
 
-LABEL_FILE = '~/SkyDrive/Apps/filecolorer'
+LABEL_FILE = '~/SkyDrive/Apps/bin/filecolorer'
 LABEL_PATH = File.expand_path(LABEL_FILE)
 
 # remove any pre-existing playlist file
