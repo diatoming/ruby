@@ -43,6 +43,12 @@ module Tao
       puts "*** Section #{@section} ***\n\n"
       puts File.read @section_file_path
     end
+    
+    # returns current tao section
+    # input:  none
+    # output: str with current section
+    def read_section
+      File.read @section_file_path
+    end
   end
-  
 end
