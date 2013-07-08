@@ -23,9 +23,7 @@
 # Copyright (c) 2012 rimbaudcode
 # Licensed under GPLv3+. No warranty provided.
 
-
 require 'rake/clean'
-
 
 # this file contains the ruby-gnuplot info
 GNUPLOT_RUBY = 'sine.rb'
@@ -98,9 +96,6 @@ end
 # maintenance tasks
 CLEAN.include('*.tex', '*.aux', '*.log')
 CLOBBER.include('*.pdf')
-
-
-# instructions to build the necessary files
 
 # produce raw graphic using gnuplot
 file GNUPLOT_TEX => GNUPLOT_RUBY do

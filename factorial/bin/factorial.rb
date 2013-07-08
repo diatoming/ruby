@@ -1,5 +1,4 @@
 #!/usr/local/bin/ruby
-#--
 # Have faith in the way things are.
 #
 # factorial.rb
