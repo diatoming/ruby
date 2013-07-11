@@ -22,5 +22,5 @@ tmp = Dir.tmpdir
 FileUtils.cd tmp
 p tmp
 `open #{tmp}`
-p 'look for size and FlashTmp.*'
-p 'cp to Desktop and rename'
+#p 'look for size and FlashTmp.*'
+#p 'cp to Desktop and rename'
