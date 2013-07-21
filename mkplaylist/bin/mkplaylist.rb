@@ -3,15 +3,11 @@
 # Have faith in the way things are.
 #
 # mkplaylist.rb
-# current v.: 0.0.1
-# date: 2013.06.25
+# date: 2013.07.21
 #++
 
 # == Description
-# create a m3u playlist of media files in current dir
-#
-# == Usage
-# mkplaylist.rb
+# mk a .m3u playlist with media files
 #
 # == Author
 # rimbaud1854
@@ -20,26 +16,24 @@
 # Copyright (c) 2013 rimbaudcode
 # Licensed under GPLv3+. No warranty provided.
 
-$LOAD_PATH << File.expand_path(File.dirname(__FILE__) + '/../lib')
+$LOAD_PATH << File.expand_path(File.join(__dir__, '../lib'))
 
 require 'mkplaylist'
 
-PLAY_LIST_NAME  = 'playlist.m3u'
-LABEL_COLOR     = 1
-MEDIA_FILES_EXT = ['.flv','.mp4', '.MP4', '.mp3', '.avi', '.MP3', '.MOV',
-                    '.m4a', '.wmv', '.mov', '.m4v','.mpg', '.f4v']
-
-def main args
-  rm_old_playlist
-  file_lst = find_files_with_extensions MEDIA_FILES_EXT
-  write_playlist file_lst, PLAY_LIST_NAME
-  label_file PLAY_LIST_NAME, LABEL_COLOR
-  exit
-end
-
 if $0 == __FILE__
   begin
-    exit main $*
+    PLAYLIST_FILE_NAME = 'playlist.m3u'
+    
+    MEDIA_FILES_EXT = ['flv','mp4', 'MP4', 'mp3', 'avi', 'MP3', 'MOV', 
+      'm4a', 'wmv', 'mov', 'm4v','mpg', 'f4v']
+    
+    pl_mkr = VideoPlaylistMaker.new PLAYLIST_FILE_NAME, MEDIA_FILES_EXT
+    pl_mkr.rm_playlist
+    pl_mkr.find_media_files
+    pl_mkr.playlist_to_file
+    pl_mkr.color_playlist_file
+    
+    exit
   rescue
     $stderr.puts "#{$!}"
     $@.each do |item| $stderr.puts item end
