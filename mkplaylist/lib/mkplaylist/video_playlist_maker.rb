@@ -40,7 +40,7 @@ class VideoPlaylistMaker < Object
     @media_files_ext.each do |ext|
       @media_filenames << Dir.glob("**/*.#{ext}")
     end
-    @media_filenames.flatten.sort
+    @media_filenames.flatten!.sort!
   end
   
   def rm_playlist
@@ -53,9 +53,6 @@ class VideoPlaylistMaker < Object
   # #EXTM3U - header - must be first line of file
   # #EXTINF - extra info - length (seconds), title
   def playlist_to_file
-    
-    @media_filenames = self.find_media_files
-    
     File.open @playlist_filename, 'w' do |f| 
       f.puts PLAYLIST_HEADER
       @media_filenames.each do |file| 
