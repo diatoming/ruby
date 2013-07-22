@@ -23,9 +23,8 @@ require 'mkplaylist'
 if $0 == __FILE__
   begin
     PLAYLIST_FILE_NAME = 'playlist.m3u'
-    
-    MEDIA_FILES_EXT = ['flv','mp4', 'MP4', 'mp3', 'avi', 'MP3', 'MOV', 
-      'm4a', 'wmv', 'mov', 'm4v','mpg', 'f4v']
+    MEDIA_FILES_EXT = ['avi', 'f4v', 'flv', 'm4a', 'm4v', 'mov', 
+      'mp3', 'mp4', 'mpg', 'wmv']
     
     pl_mkr = VideoPlaylistMaker.new PLAYLIST_FILE_NAME, MEDIA_FILES_EXT
     pl_mkr.rm_playlist
