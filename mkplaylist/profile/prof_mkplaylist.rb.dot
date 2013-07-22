@@ -1,0 +1,137 @@
+digraph "Profile" {
+labelloc=t;
+labeljust=l;
+subgraph "Thread 70242592491220" {
+70242592229720 [label="[No method]\n(97%)"];
+70242592229720 -> 70242592229520 [label="1/2" fontsize=10 fontcolor="#666666"];
+70242592229720 -> 70242592229540 [label="1/2" fontsize=10 fontcolor="#666666"];
+70242592229720 -> 70242592229680 [label="1/1" fontsize=10 fontcolor="#666666"];
+70242592229720 -> 70242592229700 [label="1/1" fontsize=10 fontcolor="#666666"];
+70242592229520 [label="require\n(92%)"];
+70242592229520 -> 70242592229220 [label="2/2" fontsize=10 fontcolor="#666666"];
+70242592229520 -> 70242592229440 [label="2/2" fontsize=10 fontcolor="#666666"];
+70242592229520 -> 70242592229500 [label="2/2" fontsize=10 fontcolor="#666666"];
+70242592229520 -> 70242592229140 [label="2/2" fontsize=10 fontcolor="#666666"];
+70242592229520 -> 70242592229260 [label="2/2" fontsize=10 fontcolor="#666666"];
+70242592229220 [label="gem_original_require\n(87%)"];
+70242592229220 -> 70242592229820 [label="4/6" fontsize=10 fontcolor="#666666"];
+70242592229220 -> 70242592229540 [label="1/2" fontsize=10 fontcolor="#666666"];
+70242592229220 -> 70242592229200 [label="1/1" fontsize=10 fontcolor="#666666"];
+70242592229220 -> 70242592229160 [label="5/5" fontsize=10 fontcolor="#666666"];
+70242592229220 -> 70242592229520 [label="1/2" fontsize=10 fontcolor="#666666"];
+70242592229820 [label="set_encoding\n(4%)"];
+70242592229440 [label="find_unresolved_default_spec\n(3%)"];
+70242592229440 -> 70242592229300 [label="2/2" fontsize=10 fontcolor="#666666"];
+70242592229440 -> 70242592229400 [label="2/2" fontsize=10 fontcolor="#666666"];
+70242592229500 [label="mon_enter\n(2%)"];
+70242592229500 -> 70242592229480 [label="3/5" fontsize=10 fontcolor="#666666"];
+70242592229500 -> 70242592229460 [label="1/1" fontsize=10 fontcolor="#666666"];
+70242592229140 [label="mon_exit\n(2%)"];
+70242592229140 -> 70242592229100 [label="2/2" fontsize=10 fontcolor="#666666"];
+70242592229140 -> 70242592229080 [label="1/1" fontsize=10 fontcolor="#666666"];
+70242592229300 [label="each\n(2%)"];
+70242592229540 [label="expand_path\n(1%)"];
+70242592229480 [label="current\n(1%)"];
+70242592229100 [label="mon_check_owner\n(1%)"];
+70242592229100 -> 70242592229480 [label="2/5" fontsize=10 fontcolor="#666666"];
+70242592229260 [label="unresolved_deps\n(1%)"];
+70242592229680 [label="join\n(0%)"];
+70242592229400 [label="suffixes\n(0%)"];
+70242592229700 [label="__dir__\n(0%)"];
+70242592229080 [label="unlock\n(0%)"];
+70242592229200 [label="inherited\n(0%)"];
+70242592229460 [label="lock\n(0%)"];
+70242592229160 [label="method_added\n(0%)"];
+}
+subgraph cluster_70242592359340 {
+label = "IO";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70242592229820;
+}
+subgraph cluster_70242592359120 {
+label = "Global";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70242592229720;
+}
+subgraph cluster_70242592358720 {
+label = "Kernel";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70242592229700;
+70242592229520;
+70242592229220;
+}
+subgraph cluster_70242592358440 {
+label = "<Class::File>";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70242592229680;
+70242592229540;
+}
+subgraph cluster_70242592378680 {
+label = "MonitorMixin";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70242592229500;
+70242592229140;
+70242592229100;
+}
+subgraph cluster_70242592375780 {
+label = "<Class::Thread>";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70242592229480;
+}
+subgraph cluster_70242592382740 {
+label = "Mutex";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70242592229460;
+70242592229080;
+}
+subgraph cluster_70242592382380 {
+label = "<Module::Gem>";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70242592229440;
+70242592229400;
+}
+subgraph cluster_70242592382080 {
+label = "Array";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70242592229300;
+}
+subgraph cluster_70242592381840 {
+label = "<Class::Gem::Specification>";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70242592229260;
+}
+subgraph cluster_70242592381500 {
+label = "Class";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70242592229200;
+}
+subgraph cluster_70242592381120 {
+label = "Module";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70242592229160;
+}
+}

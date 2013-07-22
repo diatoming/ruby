@@ -7,7 +7,7 @@
 #++
 
 # == Description
-# profiling factorial.rb (bin)
+# profiling mkplaylist.rb (bin)
 #
 # == Author
 # rimbaud1854
@@ -18,8 +18,8 @@
 
 require 'rake/clean'
 
-SOURCE = '../bin/factorial.rb'
-ARGUMENTS = '10'
+SOURCE = '../bin/mkplaylist.rb'
+ARGUMENTS = ''
 OUTPUT = 'prof_' + "#{File.basename SOURCE}"
 
 PROFILER = `which ruby-prof`.chomp
