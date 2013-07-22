@@ -23,7 +23,7 @@ require 'pdf2txt'
 def main args
   pdf_file_name = $*.shift
   usage if pdf_file_name.nil?
-  reader = PDF2TXT.new "tao-te-ching.pdf"
+  reader = PDF2TXT.new pdf_file_name
   puts "reading pdf..."
   puts "writing to txt..."
   reader.write_to_txt
