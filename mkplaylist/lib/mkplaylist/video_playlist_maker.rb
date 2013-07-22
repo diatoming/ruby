@@ -26,7 +26,7 @@ class VideoPlaylistMaker < Object
   
   def initialize playlist_filename, media_files_ext, file_label_color = 1
     @file_label_color  = file_label_color
-    @media_files_ext   = media_files_ext
+    @media_files_ext   = media_files_ext.uniq
     @playlist_filename = playlist_filename
     
     @media_filenames = []
@@ -37,6 +37,12 @@ class VideoPlaylistMaker < Object
   end
   
   def find_media_files
+    lst = []
+    @media_files_ext.each do |ext|  
+      lst << ext.upcase
+      lst << ext.downcase
+    end
+    @media_files_ext = lst
     @media_files_ext.each do |ext|
       @media_filenames << Dir.glob("**/*.#{ext}")
     end
