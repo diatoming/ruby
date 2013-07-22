@@ -40,7 +40,7 @@ class VideoPlaylistMaker < Object
     @media_files_ext.each do |ext|
       @media_filenames << Dir.glob("**/*.#{ext}")
     end
-    @media_filenames.flatten
+    @media_filenames.flatten.sort
   end
   
   def rm_playlist
