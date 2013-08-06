@@ -28,7 +28,7 @@ apps = [
   'Dropbox.app', 
   'SkyDrive.app', 
   #'Copy.app',
-  'doo.app',
+  #'doo.app',
   'JewelryBox.app',
   ]
   
