@@ -18,7 +18,7 @@
 
 class VideoPlaylistMaker < Object
   
-  FILE_COLORER      = '~/SkyDrive/Apps/bin/filecolorer'
+  FILE_COLORER      = '~/Documents/SkyDrive/Apps/bin/filecolorer'
   FILE_COLORER_PATH = File.expand_path(FILE_COLORER)
   
   PLAYLIST_HEADER    = '#EXTM3U'
