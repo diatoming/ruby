@@ -29,7 +29,7 @@ apps = [
   'SkyDrive.app', 
   #'Copy.app',
   #'doo.app',
-  'JewelryBox.app',
+  #'JewelryBox.app',
   ]
   
 special_apps = [
