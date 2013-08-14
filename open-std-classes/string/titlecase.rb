@@ -23,10 +23,10 @@
 class String
   #  Dave Thomas and Andrew Hunt. Programming Ruby
   def titlecase
-    gsub(/\b\w/) {|first| first.upcase }
+    gsub(/\b\w/) do |first| first.upcase end
   end
   def titlecase!
-    gsub!(/\b\w/) {|first| first.upcase }
+    gsub!(/\b\w/) do |first| first.upcase end
   end
 end
 
