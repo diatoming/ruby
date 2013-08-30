@@ -26,7 +26,8 @@ apps = [
   'GitHub.app', 
   'Xmarks for Safari.app',
   'Dropbox.app', 
-  'SkyDrive.app', 
+  'SkyDrive.app',
+  'Google Drive.app'
   #'Copy.app',
   #'doo.app',
   #'JewelryBox.app',
