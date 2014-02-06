@@ -24,13 +24,9 @@ apps = [
   'App Store.app',
   'AppFresh.app',
   'GitHub.app', 
-  'Xmarks for Safari.app',
   'Dropbox.app', 
   'SkyDrive.app',
   'Google Drive.app'
-  #'Copy.app',
-  #'doo.app',
-  #'JewelryBox.app',
   ]
   
 special_apps = [
@@ -39,7 +35,6 @@ special_apps = [
   
 tools = ['brew update', 
   'brew upgrade', 
-  #'cabal update'
   ]
 
 apps.each do |app| System.launch_app app end
