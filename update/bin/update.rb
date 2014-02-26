@@ -25,7 +25,7 @@ apps = [
   'AppFresh.app',
   'GitHub.app', 
   'Dropbox.app', 
-  'SkyDrive.app',
+  'OneDrive.app',
   'Google Drive.app'
   ]
   
