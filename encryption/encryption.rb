@@ -16,13 +16,15 @@
 # Copyright (c) 2013 rimbaudcode
 # Licensed under GPLv3+. No warranty provided.
 
-require 'aescrypt'
+require './lib/aescrypt'
 
 message  = "top secret message"
 password = "p4ssw0rd"
 
+puts "Before encryption: #{message}"
+
 encrypted_data = AESCrypt.encrypt(message, password)
-p encrypted_data
+puts "After encryption: #{encrypted_data}"
 
 message = AESCrypt.decrypt(encrypted_data, password)
-p message
+puts "After decryption: #{message}"
