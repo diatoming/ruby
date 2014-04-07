@@ -16,7 +16,7 @@
 # rimbaud1854
 #
 # == Copyright
-# Copyright (c) 2013 rimbaudcode
+# Copyright (c) 2014 rimbaudcode
 # Licensed under GPLv3+. No warranty provided.
 
 class CppCode
@@ -35,18 +35,20 @@ class CppCode
     INPUT:  void
     OUTPUT: prints "hello" in stdout
     */
-      void hello(int i) {
-        while (i-- > 0) {
-          std::cout << "hello" << std::endl;
-        }
+    void hello(int i) {
+      while (i-- > 0) {
+        std::cout << "hello" << std::endl;
       }
-      EOS
+    } 
+    EOS
     end
+    
 end
 
 
 def main args
-  CppCode.new.hello 3  
+  cppCode = CppCode.new
+  cppCode.hello 3
   exit
 end
 

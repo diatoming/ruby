@@ -17,8 +17,8 @@
 # Licensed under GPLv3+. No warranty provided.
 
 require 'test/unit'
-require 'test_unit_extensions'
-require 'factorial'
+require './test_unit_extensions'
+require '../bin/factorial'
 
 class TestFactorial < Test::Unit::TestCase
     
