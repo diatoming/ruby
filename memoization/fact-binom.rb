@@ -13,6 +13,9 @@
 # == Usage
 # fact-binom.rb
 # 
+# == Installation
+# $ sudo gem install Memoize
+#
 # == Author
 # rimbaud1854
 #
