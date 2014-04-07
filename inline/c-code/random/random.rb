@@ -35,7 +35,16 @@ class CCode < Object
     
     builder.include '<limits.h>'
     
-    builder.add_compile_flags '-O2'
+    #builder.add_compile_flags '-g'
+    #builder.add_compile_flags '-Wall'
+    #builder.add_compile_flags '-Wextra'
+
+    # link-time-optimization
+    # fastests, aggressive optimizations 
+    # relax IEEE compliance
+    builder.add_compile_flags '-flto'
+    builder.add_compile_flags '-Ofast'
+    builder.add_compile_flags '-ffast-math'
     
     builder.c <<-EOS
     /*
