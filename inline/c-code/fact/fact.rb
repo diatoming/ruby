@@ -30,23 +30,32 @@ class CCode < Object
   
   require 'inline'
   
+  FileUtils.rm_rf File.expand_path '~/.ruby_inline' # nm old code
+  
+  @compileCode = :debug
+      
   inline do |builder|
     
     builder.include '<assert.h>'
     builder.include '<iso646.h>'
     builder.include '<limits.h>'
     
-    #builder.add_compile_flags '-g'
-    #builder.add_compile_flags '-Wall'
-    #builder.add_compile_flags '-Wextra'
-
-    # link-time-optimization
-    # fastests, aggressive optimizations 
-    # relax IEEE compliance
-    builder.add_compile_flags '-flto'
-    builder.add_compile_flags '-Ofast'
-    builder.add_compile_flags '-ffast-math'
-    
+    case @compileCode
+    when :debug then
+      p 'debug code...'
+      builder.add_compile_flags '-g'
+      builder.add_compile_flags '-Wall'
+      builder.add_compile_flags '-Wextra'
+      builder.add_compile_flags '-Werror'
+    when :release then
+      #p 'release code...'
+      builder.add_compile_flags '-flto'       # link-time-optimization
+      builder.add_compile_flags '-Ofast'      # aggressive optimizations
+      builder.add_compile_flags '-ffast-math' # relax IEEE compliance
+    when nil then
+      p 'no compiler flag...'
+    end
+      
     builder.c <<-EOS
     /*
     NAME:   fact
