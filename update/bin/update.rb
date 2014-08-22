@@ -33,7 +33,9 @@ special_apps = [
   '/Applications/TeX/TeX Live Utility.app/Contents/MacOS/TeX Live Utility',
   ]
   
-tools = ['brew update', 
+tools = [
+  'brew cleanup',
+  'brew update', 
   'brew upgrade', 
   ]
 
