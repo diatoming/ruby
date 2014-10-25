@@ -22,7 +22,7 @@ require 'update'
 
 apps = [
   'App Store.app',
-  'AppFresh.app',
+  #'AppFresh.app',
   'GitHub.app', 
   'Dropbox.app', 
   'OneDrive.app',
@@ -34,15 +34,13 @@ special_apps = [
   ]
   
 tools = [
-  'brew cleanup',
   'brew update', 
   'brew upgrade', 
+  'brew cleanup',
   ]
 
 apps.each do |app| System.launch_app app end
 special_apps.each do |app| System.launch_special_app app end
 tools.each do |tool| System.launch_tool tool end
 
-p 'don\'t forget to update gems and gems packages'
-p 'also macruby...'
-p 'done...'
+p 'don\'t forget gems and gems packages...'
