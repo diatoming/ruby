@@ -26,8 +26,8 @@ require 'maintenance'
 
 apps = [
   'ClamXav.app', 
-  'CleanMyMac 2.app', 
-  'MacCleanse.app', 
+  #'CleanMyMac 2.app', 
+  #'MacCleanse.app', 
   'CCleaner.app', 
   'Ds Store Remover.app',
   'DupCleanerLite.app'
