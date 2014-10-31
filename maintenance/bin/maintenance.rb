@@ -35,4 +35,5 @@ apps = [
 
 apps.each do |app| RCSys.launch_app app end
 
+p 'Onyx...'
 p 'done...'
