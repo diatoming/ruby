@@ -22,7 +22,7 @@ require 'update'
 
 apps = [
   'App Store.app',
-  'MacUpdate Desktop',
+  'MacUpdate Desktop.app',
   'GitHub.app', 
   'Dropbox.app', 
   'OneDrive.app',
