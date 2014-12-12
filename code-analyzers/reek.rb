@@ -1,8 +1,5 @@
-#!/usr/local/bin/ruby -wKU
-# Have faith in the way things are.
-
 # run as:
-# $ reek demo.rb
+# $ reek reek.rb
 
 class Dirty
   # This method smells of :reek:NestedIterators but ignores them

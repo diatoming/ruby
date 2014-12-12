@@ -1,95 +1,104 @@
 digraph "Profile" {
 labelloc=t;
 labeljust=l;
-subgraph "Thread 70178969093840" {
-70178973803580 [label="[No method]\n(100%)"];
-70178973803580 -> 70178973803500 [label="1/242785" fontsize=10 fontcolor="#666666"];
-70178973803580 -> 70178973803380 [label="1/1" fontsize=10 fontcolor="#666666"];
-70178973803580 -> 70178973803520 [label="1/1" fontsize=10 fontcolor="#666666"];
-70178973803580 -> 70178973803560 [label="1/1" fontsize=10 fontcolor="#666666"];
-70178973803580 -> 70178973803540 [label="1/1" fontsize=10 fontcolor="#666666"];
-70178973803500 [label="fib\n(100%)"];
-70178973803500 -> 70178973803440 [label="242785/242785" fontsize=10 fontcolor="#666666"];
-70178973803500 -> 70178973803500 [label="242784/242785" fontsize=10 fontcolor="#666666"];
-70178973803440 [label="include?\n(50%)"];
-70178973803440 -> 70178973803400 [label="485570/485570" fontsize=10 fontcolor="#666666"];
-70178973803400 [label="<=>\n(21%)"];
-70178973803380 [label="puts\n(0%)"];
-70178973803380 -> 70178973803320 [label="1/1" fontsize=10 fontcolor="#666666"];
-70178973803320 [label="puts\n(0%)"];
-70178973803320 -> 70178973803260 [label="2/2" fontsize=10 fontcolor="#666666"];
-70178973803320 -> 70178973803280 [label="1/1" fontsize=10 fontcolor="#666666"];
-70178973803260 [label="write\n(0%)"];
-70178973803600 [label="set_encoding\n(0%)"];
-70178973803280 [label="to_s\n(0%)"];
-70178973803560 [label="method_added\n(0%)"];
-70178973803520 [label="to_i\n(0%)"];
-70178973803540 [label="[]\n(0%)"];
+subgraph "Thread 70363539463140" {
+70363543442420 [label="[No method]\n(100%)"];
+70363543442420 -> 70363543441840 [label="1/242785" fontsize=10 fontcolor="#666666"];
+70363543442420 -> 70363543440280 [label="1/1" fontsize=10 fontcolor="#666666"];
+70363543442420 -> 70363543441900 [label="1/1" fontsize=10 fontcolor="#666666"];
+70363543442420 -> 70363543442000 [label="1/1" fontsize=10 fontcolor="#666666"];
+70363543442420 -> 70363543442120 [label="1/1" fontsize=10 fontcolor="#666666"];
+70363543441840 [label="fib\n(100%)"];
+70363543441840 -> 70363543441780 [label="242785/242785" fontsize=10 fontcolor="#666666"];
+70363543441840 -> 70363543441300 [label="242784/242784" fontsize=10 fontcolor="#666666"];
+70363543441840 -> 70363543441580 [label="121392/121392" fontsize=10 fontcolor="#666666"];
+70363543441840 -> 70363543441040 [label="121392/121392" fontsize=10 fontcolor="#666666"];
+70363543441840 -> 70363543441840 [label="242784/242785" fontsize=10 fontcolor="#666666"];
+70363543441780 [label="include?\n(34%)"];
+70363543441780 -> 70363543441620 [label="485570/485570" fontsize=10 fontcolor="#666666"];
+70363543441620 [label="<=>\n(14%)"];
+70363543441300 [label="-\n(8%)"];
+70363543441580 [label=">\n(4%)"];
+70363543441040 [label="+\n(4%)"];
+70363543440280 [label="puts\n(0%)"];
+70363543440280 -> 70363543439680 [label="1/1" fontsize=10 fontcolor="#666666"];
+70363543439680 [label="puts\n(0%)"];
+70363543439680 -> 70363543437340 [label="2/2" fontsize=10 fontcolor="#666666"];
+70363543439680 -> 70363543437760 [label="1/1" fontsize=10 fontcolor="#666666"];
+70363543437340 [label="write\n(0%)"];
+70363543443200 [label="set_encoding\n(0%)"];
+70363543441900 [label="to_i\n(0%)"];
+70363543437760 [label="to_s\n(0%)"];
+70363543442000 [label="[]\n(0%)"];
+70363543442120 [label="method_added\n(0%)"];
 }
-subgraph cluster_70178973695780 {
+subgraph cluster_70363543731860 {
 label = "IO";
 fontcolor = "#666666";
 fontsize = 16;
 color = "#666666";
-70178973803600;
-70178973803320;
-70178973803260;
+70363543443200;
+70363543439680;
+70363543437340;
 }
-subgraph cluster_70178973695560 {
+subgraph cluster_70363543731640 {
 label = "Global";
 fontcolor = "#666666";
 fontsize = 16;
 color = "#666666";
-70178973803580;
+70363543442420;
 }
-subgraph cluster_70178973695260 {
+subgraph cluster_70363543731520 {
 label = "Module";
 fontcolor = "#666666";
 fontsize = 16;
 color = "#666666";
-70178973803560;
+70363543442120;
 }
-subgraph cluster_70178973695000 {
+subgraph cluster_70363543731180 {
 label = "Array";
 fontcolor = "#666666";
 fontsize = 16;
 color = "#666666";
-70178973803540;
+70363543442000;
 }
-subgraph cluster_70178973694620 {
+subgraph cluster_70363543730980 {
 label = "String";
 fontcolor = "#666666";
 fontsize = 16;
 color = "#666666";
-70178973803520;
+70363543441900;
 }
-subgraph cluster_70178973694140 {
+subgraph cluster_70363543730840 {
 label = "Object";
 fontcolor = "#666666";
 fontsize = 16;
 color = "#666666";
-70178973803500;
+70363543441840;
 }
-subgraph cluster_70178973693980 {
+subgraph cluster_70363543730720 {
 label = "Range";
 fontcolor = "#666666";
 fontsize = 16;
 color = "#666666";
-70178973803440;
+70363543441780;
 }
-subgraph cluster_70178973693800 {
+subgraph cluster_70363543730600 {
 label = "Fixnum";
 fontcolor = "#666666";
 fontsize = 16;
 color = "#666666";
-70178973803400;
-70178973803280;
+70363543441620;
+70363543441580;
+70363543441300;
+70363543441040;
+70363543437760;
 }
-subgraph cluster_70178973693580 {
+subgraph cluster_70363543729440 {
 label = "Kernel";
 fontcolor = "#666666";
 fontsize = 16;
 color = "#666666";
-70178973803380;
+70363543440280;
 }
 }

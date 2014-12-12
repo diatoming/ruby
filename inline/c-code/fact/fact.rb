@@ -45,7 +45,7 @@ class CCode < Object
       p 'debug code...'
       builder.add_compile_flags '-g'
       builder.add_compile_flags '-Wall'
-      builder.add_compile_flags '-Wextra'
+      #builder.add_compile_flags '-Wextra'
       builder.add_compile_flags '-Werror'
     when :release then
       #p 'release code...'

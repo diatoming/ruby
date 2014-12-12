@@ -18,8 +18,8 @@
 
 require './lib/aescrypt'
 
-message  = "top secret message"
-password = "p4ssw0rd"
+message  = 'top secret message'
+password = 'p4ssw0rd'
 
 puts "Before encryption: #{message}"
 

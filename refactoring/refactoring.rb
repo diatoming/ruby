@@ -1,4 +1,4 @@
-#!/usr/local/bin/ruby -wKU
+#!/usr/local/bin/ruby
 # Have faith in the way things are.
 
 class Test < Object
