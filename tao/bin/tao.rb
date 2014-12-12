@@ -20,7 +20,7 @@
 # Copyright (c) 2012 rimbaudcode
 # Licensed under GPLv3+. No warranty provided.
 
-$LOAD_PATH << File.expand_path(File.dirname(__FILE__) << './../lib')
+$LOAD_PATH << File.expand_path(File.join(__dir__, '../lib'))
 
 require 'tao'
 
