@@ -30,8 +30,7 @@ apps = [
        ]
 
 special_apps = [
-                 '/Applications/TeX/TeX Live Utility.app/Contents/\
-                 MacOS/TeX Live Utility'
+                 '/Applications/TeX/TeX Live Utility.app/Contents/MacOS/TeX Live Utility'
                ]
 
 tools = [
