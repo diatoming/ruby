@@ -1,0 +1,8 @@
+* in irb (from the root folder)
+$ irb
+>> load 'lib/example.bundle'
+>> Example.fact 5
+
+* or in irb (from the root folder)
+$ irb -Ilib -rexample
+>> Example.fact 5

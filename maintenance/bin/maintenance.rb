@@ -25,6 +25,7 @@ $LOAD_PATH << File.expand_path(File.dirname(__FILE__) << '/../lib')
 require 'maintenance'
 
 apps = [
+  'AdwareMedic.app',
   'ClamXav.app', 
   #'CleanMyMac 2.app', 
   #'MacCleanse.app', 
@@ -35,5 +36,5 @@ apps = [
 
 apps.each do |app| RCSys.launch_app app end
 
-p 'Onyx...'
+p "don't forget Onyx..."
 p 'done...'

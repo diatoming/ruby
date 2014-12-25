@@ -1,0 +1,80 @@
+* based on
+http://engineering.zenpayroll.com/simple-ruby-c-extensions-with-swig/
+
+* create a project folder, lib folder and ext folder. The ext folder will
+contain the external library source code and the lib folder the compiled
+library code
+
+* create the C library (.h and .c files -- interface and implementation)
+
+/* ext/libpayroll.h */
+double calculate_sui_tax(const double amount, const double rate);
+
+/* ext/libpayroll.c */
+#include "libpayroll.h"
+
+double calculate_sui_tax(const double amount, const double rate)  
+{
+  double tax = amount * rate;
+  return tax;
+}
+
+* to wrap the lib with swig, we need an interface file (ruby - C interface)
+
+/* ext/libpayroll.i */
+%module libpayroll
+%{
+  #include "libpayroll.h"
+%}
+
+extern double calculate_sui_tax(const double amount, const double rate);
+
+* run swig (in project folder) to create the wrapped code (a .c file)
+$ swig -ruby ext/libpayroll.i
+
+* to compile the wrapped code, we need a config file
+
+# ext/extconf.rb
+require 'mkmf'  
+create_makefile('libpayroll')
+
+* to create the extension
+
+$ cd ext
+$ ruby extconf.rb
+$ make
+$ cp libpayroll.bundle ../lib
+
+* to test the extension in irb (in root folder)
+
+$ irb -Ilib -rlibpayroll
+
+* rake file to automatize things (root folder)
+
+# rakefile.rb
+# require 'bundler/gem_tasks'  # if project created with bundle gem
+require 'rake/clean'
+
+CLEAN.include('ext/**/*{.o,.log,.so,.bundle}')  
+CLEAN.include('ext/**/Makefile')  
+CLOBBER.include('lib/*{.so,.bundle}')
+
+desc 'Build the libpayroll C extension'  
+task :build_ext do  
+  Dir.chdir("ext/") do
+    sh "swig -ruby libpayroll.i"
+    ruby "extconf.rb"
+    sh "make"
+  end
+  cp "ext/libpayroll.bundle", "lib/"
+end
+
+* to use in production code (main function in bin folder)
+
+# payroll.rb
+
+$LOAD_PATH << File.expand_path(File.join(__dir__, '../lib'))
+
+require 'libpayroll'
+
+p Libpayroll.calculate_sui_tax(9000, 0.34)

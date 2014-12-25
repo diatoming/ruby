@@ -36,12 +36,17 @@ special_apps = [
 tools = [
           'brew update',
           'brew upgrade',
-          'brew cleanup'
+          'brew prune',
+          'brew cleanup',
+          'brew doctor',
+          'cabal install cabal-install',
+          'cabal update'
         ]
 
 apps.each { |app| System.launch_app app }
 special_apps.each { |app| System.launch_special_app app }
 tools.each { |tool| System.launch_tool tool }
 
+p 'run "$ ghc-pkg-clean" to prune cabal rep...'
 p 'don\'t forget iTunes apps...'
 p 'don\'t forget gems and gems packages...'

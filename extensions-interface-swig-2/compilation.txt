@@ -1,0 +1,75 @@
+* Sources:
+http://www.swig.org/tutorial.html
+http://engineering.zenpayroll.com/simple-ruby-c-extensions-with-swig/
+
+* create the folders
+$ mkdir bin ext lib
+
+* create the C lib in ext folder
+
+/* File : example.c */
+ 
+ #include <time.h>
+ double My_variable = 3.0;
+ 
+ int fact(int n) {
+     if (n <= 1) return 1;
+     else return n*fact(n-1);
+ }
+ 
+ int my_mod(int x, int y) {
+     return (x%y);
+ }
+ 	
+ char *get_time()
+ {
+     time_t ltime;
+     time(&ltime);
+     return ctime(&ltime);
+ }
+
+* create the interface (wrapper) file
+
+/* example.i */
+%module example
+%{
+/* Put header files here or function declarations like below */
+extern double My_variable;
+extern int fact(int n);
+extern int my_mod(int x, int y);
+extern char *get_time();
+%}
+
+extern double My_variable;
+extern int fact(int n);
+extern int my_mod(int x, int y);
+extern char *get_time();
+
+* build the wrapper
+
+$ swig -ruby ext/example.i
+
+* compile the wrapper
+
+# ext/example.rb
+require 'mkmf'  
+create_makefile('example')
+
+$ ruby extconf.rb
+$ make
+$ cp example.bundle ../lib
+
+* test the extension (in root folder)
+
+$ irb -Ilib -rexample
+>> Example.fact 5
+
+* in production (in bin folder)
+
+# bin/example.rb
+
+$LOAD_PATH << File.expand_path(File.join(dir, ‘../lib’))
+
+require ‘example’
+
+p Example.fact 5
