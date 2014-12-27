@@ -16,8 +16,8 @@
 # Copyright (c) 2013 rimbaudcode
 # Licensed under GPLv3+. No warranty provided.
 
-ONE_DRIVE_PATH        = '/Users/art/Documents/OneDrive'
-EXECUTABLE_FILES_PATH = '/Users/art/Documents/OneDrive/Apps/bin'
+ONE_DRIVE_PATH        = '/Users/art/OneDrive'
+EXECUTABLE_FILES_PATH = '/Users/art/OneDrive/Apps/bin'
 
 def change_to_path path
   Dir.chdir path
