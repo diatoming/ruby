@@ -30,6 +30,7 @@ apps = [
   #'CleanMyMac 2.app', 
   #'MacCleanse.app', 
   'CCleaner.app', 
+  'Quick Cleaner.app'
   'Ds Store Remover.app',
   'DupCleanerLite.app'
   ]
