@@ -16,6 +16,18 @@
 # Copyright (c) 2013 rimbaudcode
 # Licensed under GPLv3+. No warranty provided.
 
+class Array
+  def sort_str_with_num
+    self.sort_by do |s|
+      if s =~ /^\d+$/
+        [2, $&.to_i]
+      else
+        [1, s]
+      end
+    end
+  end
+end
+
 class VideoPlaylistMaker < Object
   
   FILE_COLORER      = '~/OneDrive/Apps/bin/filecolorer'
