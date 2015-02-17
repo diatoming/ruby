@@ -76,6 +76,7 @@ class VideoPlaylistMaker < Object
       @media_filenames.each do |file| 
         f.puts "#{PLAYLIST_XTR_INFO}: #{file}"
         f.puts "#{file}"
+        f.puts ""
       end
     end
   end
